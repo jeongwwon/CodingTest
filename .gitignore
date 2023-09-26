@@ -14,10 +14,10 @@
 *.VC.VC.opendb
  
 # Build results
- .vs
+ .vs/
 [Dd]ebug/
 [Rr]elease/
-x64
+x64/
 
 build/
 [Bb]in/
