@@ -10,10 +10,11 @@
 *.VC.VC.opendb
  
 # Build results
- 
+ .vs/
 [Dd]ebug/
 [Rr]elease/
 x64/
+
 build/
 [Bb]in/
 [Oo]bj/
@@ -49,7 +50,7 @@ build/
 *.pidb
 *.log
 *.scc
- 
+*.tlog
 # Visual C++ cache files
 ipch/
 *.aps
