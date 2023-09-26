@@ -5,15 +5,19 @@
 *.suo
 *.user
 *.sln.docstates
- 
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj
+*.sln
+
 *.VC.db
 *.VC.VC.opendb
  
 # Build results
- .vs/
+ .vs
 [Dd]ebug/
 [Rr]elease/
-x64/
+x64
 
 build/
 [Bb]in/
