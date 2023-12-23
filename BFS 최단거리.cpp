@@ -15,7 +15,7 @@ int main() {
             cin >> a[i][j];
         }
     }
-    queue<pair<int, int>>q;
+    queue<pair<int, int>> q;
     visited[sy][sx] = 1;
     q.push({ sy,sx });
     while (q.size()) {
@@ -23,9 +23,9 @@ int main() {
         for (int i = 0; i < 4; i++) {
             int ny = y + dy[i];
             int nx = x + dx[i];
-            if (ny < 0 || nx < 0 || nx >= m || ny >= n || a[ny][nx] == 0) continue;
+            if (nx < 0 || ny < 0 || m <= nx || n <= ny || a[ny][nx]==0) continue;
             if (visited[ny][nx]) continue;
-            visited[ny][nx] = visited[y][x] + 1;
+            visited[ny][nx] = visited[y][x]+1;
             q.push({ ny,nx });
         }
     }
