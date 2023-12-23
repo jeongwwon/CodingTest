@@ -24,10 +24,10 @@ void bfs(int from,int to) {
 	}
 }
 int main() {
-	scanf_s("%d %d", &n, &m);
+	scanf("%d %d", &n, &m);
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			scanf_s("%1d", &a[i][j]);
+			scanf("%1d", &a[i][j]);
 		}
 	}
 	visited[0][0] = 1;
