@@ -2,7 +2,7 @@
 using namespace std;
 int T,n, m,h;
 int x, y;
-const int max_n = 50;
+const int max_n = 51;
 int arr[max_n][max_n];
 int visited[max_n][max_n];
 
