@@ -1,26 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-char c[1004];
 string s;
-map<int, string> mp;
+int lcnt, vcnt;
+bool isVowel(int idx) {
+	return (idx == 'a' || idx == 'e' || idx == 'o' || idx == 'u' || idx == 'i');
+}
 int main() {
-	int count = 0;
 	while (1) {
 		cin >> s;
 		if (s == "end") break;
-		mp[count++] = s;
-	}
-	for (int i = 0; i < mp.size(); i++) {
-		if (mp[i].find('a') == string::npos || mp[i].find('e') == string::npos || mp[i].find('i') == string::npos || mp[i].find('o') == string::npos || mp[i].find('u') == string::npos) {
-			cout << "<" << mp[i] << ">" << " is not acceptable."<<"\n";
-			continue;
-		}
-		for (int i = mp.size() - 1; 0 < i; i--) {
-			if (mp[i] == mp[i - 1] && mp[i].find('e') == string::npos && mp[i].find('o') == string::npos) {
-				cout << "<" << mp[i] << ">" << " is not acceptable."<<"\n";
-				continue;
+		lcnt = vcnt = 0;
+		bool flag = 0;
+		bool is_include_v = 0;
+		int prev = -1;
+		for (int i = 0; i < s.size(); i++) {
+			int idx = s[i];
+			if (isVowel(idx))  lcnt++, vcnt = 0, is_include_v = 1;
+			else vcnt++, lcnt = 0;
+			if (vcnt == 3 || lcnt == 3) flag = 1;
+			if (i >= 1 && (prev == idx) && (idx != 'e' && idx != 'o')) {
+				flag = 1;
 			}
+			prev = idx;
 		}
-		cout << "<" << mp[i] << ">" << " is acceptable."<<"\n";
+		if (is_include_v == 0) flag = 1;
+		if(flag) cout<<"<"<<s<<">"" is not acceptable.\n";
+		else cout << "<" << s << ">" << " is acceptable.\n";
 	}
 }
