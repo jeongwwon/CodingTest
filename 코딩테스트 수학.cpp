@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-//최소 공약수
+//최대 공약수
 int gcd(int a, int b) {
 	if (a == 0) {
 		return b;
 	}
 	return gcd(b % a, a);
 }
-//최대 공배수
+//최소 공배수
 int lcm(int a, int b) {
 	int ch=gcd(a, b);
 	cout << "최대 공약수:" << ch << "\n";
