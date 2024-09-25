@@ -1,19 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-//ÃÖ¼Ò °ø¾à¼ö
+//ìµœëŒ€ ê³µì•½ìˆ˜
 int gcd(int a, int b) {
 	if (a == 0) {
 		return b;
 	}
 	return gcd(b % a, a);
 }
-//ÃÖ¼Ò °ø¹è¼ö
+//ìµœì†Œ ê³µë°°ìˆ˜
 int lcm(int a, int b) {
 	int ch=gcd(a, b);
-	cout << "ÃÖ´ë °ø¾à¼ö:" << ch << "\n";
+	cout << "ìµœëŒ€ ê³µì•½ìˆ˜:" << ch << "\n";
 	return (a * b) /ch;
 }
-//¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼: ¼Ò¼ö°¡ ¾Æ´Ñ °ªµé¿¡ ´ëÇÑ ºÒ¸®¾ğ ¹è¿­ »ı¼º
+//ì—ë¼í† ìŠ¤í…Œë„¤ìŠ¤ì˜ ì²´: ì†Œìˆ˜ê°€ ì•„ë‹Œ ê°’ë“¤ì— ëŒ€í•œ ë¶ˆë¦¬ì–¸ ë°°ì—´ ìƒì„±
 const int max_n = 40;
 bool che[max_n + 1];
 vector<int>era(int mx_n) {
@@ -31,7 +31,7 @@ vector<int>era(int mx_n) {
 	}
 	return v;
 }
-//¼Ò¼ö Ã¼Å© ÇÔ¼ö, ¹è¿­ÀÇ Å©±â°¡ 1000¸¸ ÀÌ»óÀÏ¶§
+//ì†Œìˆ˜ ì²´í¬ í•¨ìˆ˜, ë°°ì—´ì˜ í¬ê¸°ê°€ 1000ë§Œ ì´ìƒì¼ë•Œ
 bool check(int a) {
 	if (a <= 1)return 0;
 	if (a == 2)return 1;
@@ -41,27 +41,27 @@ bool check(int a) {
 	}
 	return 1;
 }
-//µîÂ÷ ¼ö¿­ÀÇ ÇÕ: a:ÃÊÇ× b:µîÂ÷ c:Ç×ÀÇ ¼ö
+//ë“±ì°¨ ìˆ˜ì—´ì˜ í•©: a:ì´ˆí•­ b:ë“±ì°¨ c:í•­ì˜ ìˆ˜
 int sum(int a, int b, int c) {
-	// ¸¶Áö¸·Ç×: c-1 * b + a
+	// ë§ˆì§€ë§‰í•­: c-1 * b + a
 	int l = (c - 1) * b + a;
 	return c*(a + l) / 2;
 }
 int main() {
-	cout << "--ÃÖ´ë °ø¾à¼ö--\n";
+	cout << "--ìµœëŒ€ ê³µì•½ìˆ˜--\n";
 	int a = 10, b = 12;
 	cout << lcm(a, b) << "\n";
-	cout << "--¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼--\n";
+	cout << "--ì—ë¼í† ìŠ¤í…Œë„¤ìŠ¤ì˜ ì²´--\n";
 	vector<int>vv = era(max_n);
 	for (int i : vv) {
 		cout << i << " ";
 	}
-	cout << "\n--µîÂ÷ ¼ö¿­ÀÇ ÇÕ--\n";
+	cout << "\n--ë“±ì°¨ ìˆ˜ì—´ì˜ í•©--\n";
 	cout << sum(3, 5, 5) << "\n";
-	cout << "\n--µîºñ ¼ö¿­ÀÇ ÇÕ--\n";
-	int a1 = 1, r = 2, n = 4;//ÃÊÇ× 1,°øºñ 2,Ç× 4°³
+	cout << "\n--ë“±ë¹„ ìˆ˜ì—´ì˜ í•©--\n";
+	int a1 = 1, r = 2, n = 4;//ì´ˆí•­ 1,ê³µë¹„ 2,í•­ 4ê°œ
 	vector<int>v;
-	cout << a1 * ((int)pow(r, n) - 1) / (r - 1)<<"\n";  //pow´Â double ÇüÀ» ¹İÈ¯ÇÏ±â ¶§¹®¿¡ int º¯È¯ ÇÊ¿äÇÏ´Ù.
+	cout << a1 * ((int)pow(r, n) - 1) / (r - 1)<<"\n";  //powëŠ” double í˜•ì„ ë°˜í™˜í•˜ê¸° ë•Œë¬¸ì— int ë³€í™˜ í•„ìš”í•˜ë‹¤.
 	for (int i = 0; i < n; i++) {
 		v.push_back(a1);
 		a1 *= r;
