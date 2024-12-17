@@ -31,3 +31,19 @@ int ny = (y+ 움직이려는 칸의 개수) % 2*(행의 개수 - 1);
 double a = 1.234567;
 cout << fixed << setprecision(3) <<a<<"\n";
 ```
+
+## 소수 배열
+```c++
+int che[104];
+
+vector<int>v;
+for(int i=2;i<=100;i++){
+  if(che[i])continue;
+  for(int j=i*2;j<=100;j+=i){
+    che[j]=1;
+  }
+}
+for(int i=2;i<=100;i++){
+  if(che[i]==0) v.push_back(i);
+}
+```
