@@ -1,3 +1,9 @@
+## 문자열 중간 삽입
+```c++
+string s;
+s.insert(s.begin()+s.size()/2,원하는 문자);
+```
+
 ## 정사각 배열 90도 회전
 ```c++
 temp[i][j]=a[n-j-1][i];
