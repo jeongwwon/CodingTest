@@ -25,6 +25,11 @@ int a=1e9; // 10억
 ```
 <br>
 
+## Priority Queue 오름차순(default == 큰 값이 top == 내림차순)
+```c++
+priority_queue<int,vector<int>,greater<int>>pq;
+```
+<br>
 ## 최대 자릿수
 Int -> 10자리 
  
