@@ -12,7 +12,7 @@ temp[i][j]=a[n-j-1][i];
 ## rotate()
 ```c++
 vector<int> v ={1,2,3,4,5}; 
-rotate(v.rbegin(),v.rbegin()+1,v.end()); // 요소 1개별 오른쪽 회전
+rotate(v.rbegin(),v.rbegin()+1,v.rend()); // 요소 1개별 오른쪽 회전
 // {5,1,2,3,4}
 
 vector<int> v={1,2,3,4,5}; 
