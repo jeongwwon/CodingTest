@@ -67,35 +67,3 @@ for(int i=2;i<=100;i++){
   if(che[i]==0) v.push_back(i);
 }
 ```
-
-## JAVA 메서드
-### StringBuilder
-append(String s) : 문자열을 추가  
-insert(int offset, String s) : 특정 위치에 문자열 삽입  
-indexOf(String s) : 문자열 s가 처음 등장하는 위치 반환 (없으면 -1)  
-replace(int start, int end, String s) : 지정된 범위의 문자열을 교체	  
-delete(int start, int end) : 지정된 범위의 문자열을 삭제  
-deleteCharAt(int index) : 특정 인덱스의 문자 삭제  
-reverse() : 뒤집음  
-toString() : String으로 변환  
-substring(int start, int end) : 특정 부분 문자열 반환  
-
-### Map
-put(K key, V value) : 키-값 쌍을 추가  
-putIfAbsent(K key, V value) : 키가 없을 때만 추가  
-get(K key) : 해당 키의 값을 반환  
-getOrDefault(K key, V defaultValue) : 키가 없으면 기본값 반환  
-containsKey(K key) : 해당 키가 존재하는지 확인  
-containsValue(V value) : 특정 값이 존재하는지 확인  
-remove(K key) : 특정 키를 삭제  
-size() : 개수 반환  
-isEmpty() : 비어있는지 확인  
-
-향상된 for문
-```java
-Map<String, Integer> map = new HashMap<>();
-for (Map.Entry<String, Integer> entry : map.entrySet()) {
-  System.out.println(entry.getKey() + ": " + entry.getValue());
-}
-
-```
