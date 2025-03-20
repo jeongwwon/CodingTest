@@ -67,3 +67,15 @@ for(int i=2;i<=100;i++){
   if(che[i]==0) v.push_back(i);
 }
 ```
+
+## JAVA 메서드
+### StringBuilder
+append(String s) : 문자열을 추가  
+insert(int offset, String s) : 특정 위치에 문자열 삽입  
+indexOf(String s) : 문자열 s가 처음 등장하는 위치 반환 (없으면 -1)  
+replace(int start, int end, String s) : 지정된 범위의 문자열을 교체	  
+delete(int start, int end) : 지정된 범위의 문자열을 삭제  
+deleteCharAt(int index) : 특정 인덱스의 문자 삭제  
+reverse() : 뒤집음  
+toString() : String으로 변환  
+substring(int start, int end) : 특정 부분 문자열 반환  
